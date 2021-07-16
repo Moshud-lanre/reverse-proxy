@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-reverseproxy .
-  - docker tag simple-express moshud/simple-reverseproxy:latest
+  - docker tag simple-reverseproxy moshud/simple-reverseproxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
