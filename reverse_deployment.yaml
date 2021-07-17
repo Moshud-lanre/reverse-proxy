@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      service: reverseproxy 
+      app: reverseproxy 
   template:
     metadata:
       labels:
-        service: reverseproxy
+        app: reverseproxy
     spec:
       containers:
       - image: moshud/simple-reverseproxy
